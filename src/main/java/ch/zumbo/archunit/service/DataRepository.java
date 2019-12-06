@@ -1,4 +1,4 @@
-package ch.zumbo.archunit.infrastructure;
+package ch.zumbo.archunit.service;
 
 public interface DataRepository {
     String mockData();
