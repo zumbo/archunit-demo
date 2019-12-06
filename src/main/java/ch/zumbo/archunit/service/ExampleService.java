@@ -1,6 +1,7 @@
 package ch.zumbo.archunit.service;
 
 import ch.zumbo.archunit.business.MyCoreDomain;
+import ch.zumbo.archunit.infrastructure.DataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

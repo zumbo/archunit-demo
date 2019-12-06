@@ -1,6 +1,5 @@
 package ch.zumbo.archunit.infrastructure;
 
-import ch.zumbo.archunit.service.DataRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
