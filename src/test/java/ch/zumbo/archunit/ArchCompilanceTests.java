@@ -11,6 +11,7 @@ import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.methods;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 import static com.tngtech.archunit.library.Architectures.onionArchitecture;
+import static com.tngtech.archunit.library.dependencies.SlicesRuleDefinition.slices;
 
 @AnalyzeClasses(importOptions = ImportOption.DoNotIncludeArchives.class)
 class ArchCompilanceTests {
@@ -66,6 +67,9 @@ class ArchCompilanceTests {
             .domainServices("..service..")
             .applicationServices("..service..")
             .adapter("infrastructure","..infrastructure..", "ch.zumbo.archunit");
+
+    @ArchTest
+    static final ArchRule noCyclicDependencies = slices().matching("ch.zumbo.archunit.(*)..").should().beFreeOfCycles();
 
 
 }
