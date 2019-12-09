@@ -28,3 +28,6 @@ Schreibe es so um, dass ein Test reicht. Es gibt dazu die High-Level-Funktionen 
 Letztere sollte besser an unsere Architektur angepasst sein, aber es gilt zu berücksichtigen, dass wir nur eine Service-Schicht haben 
 (`onionArchitecture()` erwartet sowohl Domain Services als auch Application Services) und dass die Main-Applikation noch irgendwie
  in die Zwiebelarchitektur rein muss (oder aus den Tests ausgeschlossen werden muss).
+ 
+ 8. Schaue dir die vordefinierten Regeln in com.tngtech.archunit.library.GeneralCodingRules an und probiere sie aus. Versuche sie
+  zu verletzen (eine sollte schon verletzt sein).
