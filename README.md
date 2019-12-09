@@ -20,7 +20,7 @@ können wir einfach testen, ob sie public sind oder nicht.
 
 7. Unser Code sollte nach einer Onion-Architektur aufgebaut sein. 
 Zuinnerst haben wir den Business-Core (Package `business`), darum herum die Service-Schicht
-(Package `service`) und zuäusserst die Infrastrukturschicht (Package `service`). 
+(Package `service`) und zuäusserst die Infrastrukturschicht (Package `infrastructure`). 
 Stelle sicher, dass keine innere Schicht eine Abhängigkeit auf eine äussere Schicht hat.
 Wenn dein Test richtig geschrieben ist, wird er einen Architekturfehler aufdecken. Korrigiere diesen Fehler.   
 Implementiere es zuerst mit `dependOnClassesThat()`. Das braucht aber für drei Schichten mindestens zwei Tests.  
