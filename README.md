@@ -31,3 +31,5 @@ Letztere sollte besser an unsere Architektur angepasst sein, aber es gilt zu ber
  
  8. Schaue dir die vordefinierten Regeln in com.tngtech.archunit.library.GeneralCodingRules an und probiere sie aus. Versuche sie
   zu verletzen (eine sollte schon verletzt sein).
+  
+9. Teile die Applikation in Slices (entsprechend den drei Packages) auf und stelle sicher, dass keine zyklischen Abhängigkeiten existieren.
