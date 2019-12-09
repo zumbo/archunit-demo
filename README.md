@@ -13,22 +13,18 @@ Studiere, was der Test überprüft. Ändere den Code so, dass der Test fehlschl�
 4. Schreibe einen Test, der sicherstellt, dass unsere Service-Klassen mit der Spring-@Service-Annotation versehen sind.
 Stelle auch sicher, dass ausserhalb der Service-Package keine @Service-Annotationen vorhanden sind.
 
-5. Stelle mit einem Test sicher, dass im Business-Layer keine statischen Methoden vorhanden sind, 
-es sei denn, sie befinden sich in einer Klasse, deren Name mit Utils endet.  
+5. Stelle mit einem Test sicher, dass im Business-Layer keine statischen Methoden vorhanden sind, mit Ausnahme von Klassen, die mit Utils enden.  
 
 6. Utils-Klassen, bzw. -Methoden sollen nicht von ausserhalb der Package aufgerufen werden. Um das zu garantieren, 
 können wir einfach testen, ob sie public sind oder nicht.   
 
-5. Unser Code sollte nach einer Onion-Architektur aufgebaut sein. 
+7. Unser Code sollte nach einer Onion-Architektur aufgebaut sein. 
 Zuinnerst haben wir den Business-Core (Package `business`), darum herum die Service-Schicht
 (Package `service`) und zuäusserst die Infrastrukturschicht (Package `service`). 
-Stelle sicher, dass keine innere Schicht eine Abhängigkeit auf eine äussere Schicht hat.  
+Stelle sicher, dass keine innere Schicht eine Abhängigkeit auf eine äussere Schicht hat.
+Wenn dein Test richtig geschrieben ist, wird er einen Architekturfehler aufdecken. Korrigiere diesen Fehler.   
 Implementiere es zuerst mit `dependOnClassesThat()`. Das braucht aber für drei Schichten mindestens zwei Tests.  
-Schreibe es so um, dass ein Test reicht  (Hint: In der Doku nach `layeredArchitecture()` suchen).  
-Wenn dein Test richtig geschrieben ist, wird er einen Architekturfehler aufdecken. Korrigiere diesen Fehler. 
-  
- 
- 
-  
-
- 
+Schreibe es so um, dass ein Test reicht. Es gibt dazu die High-Level-Funktionen `layeredArchitecture()`  und `onionArchitecture()`.
+Letztere sollte besser an unsere Architektur angepasst sein, aber es gilt zu berücksichtigen, dass wir nur eine Service-Schicht haben 
+(`onionArchitecture()` erwartet sowohl Domain Services als auch Application Services) und dass die Main-Applikation noch irgendwie
+ in die Zwiebelarchitektur rein muss (oder aus den Tests ausgeschlossen werden muss).
