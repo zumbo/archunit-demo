@@ -33,3 +33,6 @@ Letztere sollte besser an unsere Architektur angepasst sein, aber es gilt zu ber
   zu verletzen (eine sollte schon verletzt sein).
   
 9. Teile die Applikation in Slices (entsprechend den drei Packages) auf und stelle sicher, dass keine zyklischen Abhängigkeiten existieren.
+
+10. Versuche, ein Legacy-Problem mit FreezingArchRule "einzufrieren", so dass es bei zukünftigen Durchläufen nicht mehr rot wird.
+Es braucht dazu eine Konfigurationsdatei archunit.properties. 
